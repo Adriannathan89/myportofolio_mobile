@@ -1,29 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        title: 'MyPortfolio',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.indigo,
-            secondary: Colors.amber[700],
-          ),
-          useMaterial3: true,
-        ),
-        home: MyHomePage(),
-    );
-  }
-}
-
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 
@@ -32,9 +8,9 @@ class MyHomePage extends StatelessWidget {
   final String kelas = 'PBP E';
 
   final List<ItemHomepage> items = [
-    ItemHomepage('View Projects', Icons.folder),
-    ItemHomepage('Add Project', Icons.add_circle),
-    ItemHomepage('Logout', Icons.logout),
+    ItemHomepage('View Projects', Icons.folder, const Color(0xFF1565C0)),
+    ItemHomepage('Add Project', Icons.add_circle, const Color(0xFF2E7D32)),
+    ItemHomepage('Logout', Icons.logout, const Color(0xFFC62828)),
   ];
 
   @override
@@ -135,8 +111,9 @@ class InfoCard extends StatelessWidget {
 class ItemHomepage {
   final String name;
   final IconData icon;
+  final Color color;
 
-  ItemHomepage(this.name, this.icon);
+  ItemHomepage(this.name, this.icon, this.color);
 }
 
 class ItemCard extends StatelessWidget {
@@ -147,14 +124,14 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Theme.of(context).colorScheme.secondary,
+      color: item.color,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         onTap: () {
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(
-              SnackBar(content: Text("You pressed the ${item.name} button!"))
+              SnackBar(content: Text("Kamu telah menekan tombol ${item.name}!"))
             );
         },
         child: Container(
