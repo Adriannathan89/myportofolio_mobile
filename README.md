@@ -142,3 +142,20 @@ Hasil build akan berada di folder `build/`.
 - [Dokumentasi Flutter](https://docs.flutter.dev/)
 - [Belajar Flutter](https://docs.flutter.dev/get-started/learn-flutter)
 - [Referensi API Flutter](https://api.flutter.dev/)
+
+
+### TUGAS 7
+1. Widget Tree adalah struktur hierarki berbentuk pohon yang merepresentasikan susunan seluruh komponen User Interface (UI) pada aplikasi flutter. Dalam hubungan induk-anak (parent-child), widget induk bertugas mengatur tata letak, batasan ukuran, serta poisi dari widget anak di dalamnya, widget anak merender tampilan berdasarkan batasan ukuran yang diberikan oleh induknya, sehingga, perubahan terhadap satu widget dapat memengaruhi tampilan turunannya.
+
+2. Semua widget yang digunakan dalam project kali ini adalaha:
+    * view project -> melihat semua project dalam portfolio showcase
+    * add project -> menambahkan project baru ke list project
+    * logout -> keluar / logout akun
+
+3. Material app berfungsi sebagai pembungkus utama yang menyediakan berbagai konfigurasi dasar aplikasi berbasis design material, seperti mengatur tema, rute navigasi antar halaman (routes), judul aplikasi, dan lokalisasi bahasa. Widget ini umumnya dijadikan root widget agar seluruh halaman dan komponen di bawahnya dapat mewarisi tema sekaligus mengakses fitur navigasi secara konsisten tanpa perlu mengaturnya ulang satu per satu.
+
+4. Stateless Widget adalah widget yang bersifat statis (immuteable), artinya tampilan dan datanya tidak berubah setelah pertama kali dirender di layar. Sebaliknya, Statefull Widget bersifat dinamis (mutable), karena memiliki object `state` yang dapat menyimpan data dan memperbaharui tampilan UI secara otomatis ketika fungsi `setState()` dipanggil. Stateless Widget cocok digunakan untuk element yang tampilannya tetap (icon, text, judul). Sedangkan Statefull widget cocok untuk element yang interaktif seperti formulir, counter, atau animasi
+
+5. Build Context adalah object yang merepresentasikan lokasi spesifik sebuah widget di dalam widget tree. Object ini sangat penting karena memungkinkan sebuah  widget berinteraksi dengan widget induk diatasnya untuk mengambil data seperti konfigurasi tema, ukuran layar, atau berpindah halaman. Di dalam metode build`(BuildContext context)`, parameter context diteruskan secara otomatis oleh Flutter agar widget tersebut tahu persis di mana posisinya berada saat proses rendering berlangsung.
+
+6. Hot Reload menyuntikkan kode sumber yang baru diubah langsung kedalam Dart Virtual Machine (VM) dan membangun ulang widget tree dalam hitungan detik tanpa menghilangkan status (state) aplikasi saat ini. Sebaliknya, Hot Restart memuat ulang semua kode aplikasi dari awal dan mereset semua state kembali ke kondisi semula, dan prosesnya jauh lebih cepat daripada kompilasi penuh (full restart). kita tidak bisa mengandalakan hot reload saja dan wajib melakukan hot restart atau full restart ketika mengubah variabel global/statis, mengedit funsgi `main()` atau `initState()`, atau menambahkan plugin maupun aset baru.
