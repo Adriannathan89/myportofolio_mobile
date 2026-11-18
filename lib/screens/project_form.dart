@@ -76,6 +76,7 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  maxLines: 5,
                   decoration: InputDecoration(
                     hintText: "Deskripsi Proyek",
                     labelText: "Deskripsi Proyek",
