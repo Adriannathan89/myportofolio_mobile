@@ -95,11 +95,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            'Add Experience Form',
-          )
-        ),
+        title: const Center(child: Text('Add Experience Form')),
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
@@ -121,7 +117,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     labelText: "Nama Perusahaan",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                    )
+                    ),
                   ),
                   onChanged: (String? value) {
                     setState(() {
@@ -139,7 +135,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     labelText: "Posisi",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                    )
+                    ),
                   ),
                   onChanged: (String? value) {
                     setState(() {
@@ -161,7 +157,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     suffixIcon: const Icon(Icons.calendar_today),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                    )
+                    ),
                   ),
                 ),
               ),
@@ -179,7 +175,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     suffixIcon: const Icon(Icons.calendar_today),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                    )
+                    ),
                   ),
                 ),
               ),
@@ -193,7 +189,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                     labelText: "Deskripsi",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                    )
+                    ),
                   ),
                   onChanged: (String? value) {
                     setState(() {
